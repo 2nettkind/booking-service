@@ -11,7 +11,7 @@ Go 1.25.1 · Gin · Redis (Upstash) · Docker · Render
 
 ## Architecture
 
-\`\`\`
+```
 cmd/main.go                  entry point
 internal/
 ├── adapters/redis/          go-redis wrapper, supports rediss:// URLs
@@ -23,7 +23,7 @@ internal/
     ├── memory_store.go      test store (no deps)
     └── service_test.go      concurrency integration test
 static/index.html            single-page frontend
-\`\`\`
+```
 
 ## API
 
@@ -37,14 +37,18 @@ static/index.html            single-page frontend
 
 ## Run locally
 
-\`\`\`bash
-# option 1: local Redis
+Option 1 — local Redis:
+
+```bash
 docker run -d -p 6379:6379 redis:7-alpine
 go run ./cmd
+```
 
-# option 2: Upstash
+Option 2 — Upstash:
+
+```bash
 export REDIS_URL="rediss://default:password@host.upstash.io:6379"
 go run ./cmd
-\`\`\`
+```
 
 Open http://localhost:8080.
