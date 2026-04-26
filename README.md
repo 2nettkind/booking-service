@@ -3,7 +3,7 @@
 A seat-booking service with timed holds and a strict "one ticket, one buyer"
 guarantee under concurrent load.
 
-** URL Link: ** website: https://booking-w1i7.onrender.com/
+**URL Link:** https://booking-w1i7.onrender.com/
 
 ## Stack
 
